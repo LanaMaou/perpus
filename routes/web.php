@@ -2,11 +2,15 @@
 
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\BukuController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 
 Route::get('/', [HomeController::class, 'index']);
+Route::get('/buku', function () {
+    return Inertia::render('Buku/index');
+});
 
 Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');
