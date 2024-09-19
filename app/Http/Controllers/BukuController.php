@@ -7,8 +7,8 @@ use Inertia\Inertia;
 
 class BukuController extends Controller
 {
-    public function index()
+    public function __invoke()
     {
-        return Inertia::render('Buku');
+        return Inertia::render('Buku/index');
     }
 }

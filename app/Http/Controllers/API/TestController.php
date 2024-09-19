@@ -4,6 +4,7 @@ namespace App\Http\Controllers\API;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Inertia\Inertia;
 
 class TestController extends Controller
 {
@@ -12,6 +13,7 @@ class TestController extends Controller
      */
     public function index()
     {
+
         return response()->json([
             'message' => 'Berhasil konek ke api dayak!',
         ]);
