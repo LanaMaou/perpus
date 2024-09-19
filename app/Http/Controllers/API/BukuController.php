@@ -13,9 +13,15 @@ class BukuController extends Controller
      */
     public function index()
     {
-        return response()->json([
-            'data' => Buku::query()->latest()->get(),
-        ]);
+        try {
+            return response()->json([
+                'data' => Buku::query()->latest()->get(),
+            ]);
+        } catch (\Exception $e) {
+            return response()->json([
+                'message' => $e->getMessage(),
+            ], 500);
+        }
     }
 
     /**
