@@ -1,12 +1,12 @@
 <?php
 
-use App\Http\Controllers\HomeController;
+use App\Http\Controllers;
 use App\Http\Controllers\ProfileController;
-use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 
-Route::get('/', [HomeController::class, 'index']);
+Route::get('/', [Controllers\HomeController::class]);
+Route::get('/buku', [Controllers\BukuController::class]);
 
 Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');
