@@ -13,16 +13,10 @@ class TestController extends Controller
      */
     public function index()
     {
-<<<<<<< HEAD
-        // return response()->json([
-        //     'message' => 'Berhasil konek ke api!',
-        // ]);
-        return Inertia::render('Home');
-=======
+
         return response()->json([
             'message' => 'Berhasil konek ke api dayak!',
         ]);
->>>>>>> f6f2657ca3c12b4828f2181e5561fc62c973111f
     }
 
     /**
