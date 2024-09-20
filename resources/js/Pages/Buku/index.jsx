@@ -37,11 +37,7 @@ function Buku() {
                     munculkan Datas
                 </button> */}
 
-<<<<<<< HEAD
                 <BukuForm />
-=======
-                {/* <BukuForm /> */}
->>>>>>> 0ed7339493826ba7910da1d1a53d66571f16cd35
             </center>
         </>
     );
