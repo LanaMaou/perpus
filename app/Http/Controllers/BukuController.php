@@ -9,6 +9,6 @@ class BukuController extends Controller
 {
     public function index()
     {
-        return Inertia::render('Buku');
+        return Inertia::render('Buku/index');
     }
 }

@@ -12,6 +12,7 @@ class TestController extends Controller
      */
     public function index()
     {
+
         return response()->json([
             'message' => 'Berhasil konek ke api dayak!',
         ]);
