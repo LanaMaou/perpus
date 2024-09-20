@@ -1,31 +1,43 @@
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import axios from "axios";
 import Sebuku from "@/Components/Sebuku";
+import BukuForm from "@/Components/BukuForm";
 
 function Buku() {
     const [datas, setDatas] = useState([]);
+
+    const munculkanDatas = () => {
+        console.log(datas);
+    };
 
     useEffect(() => {
         axios
             .get("/api/buku")
             .then((response) => setDatas(response.data.data))
             .catch((error) => console.error("Error fetching API:", error));
-        console.log(datas);
     }, []);
     return (
         <>
             <center>
+                <br />
                 <div>SELAMAT DATANG DI HALAMAN BUKU</div>
-                <div className="w-10/12 px-5 py-3 ">
+                <br />
+
+                <div className="flex flex-wrap items-center justify-start w-full gap-5 px-5 py-3">
                     {datas.map((value, index) => (
-                        <>
-                            <Sebuku
-                                key={`${value.id}-${index}`}
-                                value={value}
-                            />
-                        </>
+                        <React.Fragment key={`${value.id}-${index}`}>
+                            <Sebuku value={value} />
+                        </React.Fragment>
                     ))}
                 </div>
+                {/* <button
+                    className="block px-3 py-2 transition-all duration-100 ease-in-out bg-green-500 rounded shadow active:scale-95"
+                    onClick={munculkanDatas}
+                >
+                    munculkan Datas
+                </button> */}
+
+                <BukuForm />
             </center>
         </>
     );
