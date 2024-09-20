@@ -1,3 +1,19 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.animate-skeleton {
+    @apply duration-100 rounded-md bg-gradient-to-r from-slate-300 to-transparent;
+    animation: pulse 2s linear infinite;
+}
+
+.animate-skeleton-image {
+    @apply duration-100 rounded-md bg-gradient-to-r from-red-500 to-transparent;
+    animation: pulse 2s linear infinite;
+}
+
+@keyframes pulse {
+    50% {
+        opacity: 0.5;
+    }
+}

@@ -4,7 +4,7 @@ import Sebuku from "@/Components/Sebuku";
 import BukuForm from "@/Components/BukuForm";
 
 function Buku() {
-    const [datas, setDatas] = useState([]);
+    const [datas, setDatas] = useState([{}, {}, {}, {}, {}]);
 
     const munculkanDatas = () => {
         console.log(datas);
@@ -13,7 +13,11 @@ function Buku() {
     useEffect(() => {
         axios
             .get("/api/buku")
-            .then((response) => setDatas(response.data.data))
+            .then((response) =>
+                setTimeout(() => {
+                    setDatas(response.data.data);
+                }, 5000)
+            )
             .catch((error) => console.error("Error fetching API:", error));
     }, []);
     return (
