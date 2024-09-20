@@ -15,21 +15,15 @@ function Buku() {
         <>
             <center>
                 <div>SELAMAT DATANG DI HALAMAN BUKU</div>
-                <div className=" px-5 py-3 w-10/12">
+                <div className="w-10/12 px-5 py-3 ">
                     {datas.map((value, index) => (
                         <ul
                             key={`${value.id}-${index}`}
-                            className="mb-3 text-start bg-blue-700 bg-opacity-90 px-5 py-2 rounded-md text-blue-100 w-1/2 h-32"
+                            className="w-1/2 h-32 px-5 py-2 mb-3 text-blue-100 bg-blue-700 rounded-md text-start bg-opacity-90"
                         >
-                            <li>
-                                {value.judul}
-                            </li>
-                            <li>
-                                {value.penulis}
-                            </li>
-                            <li>
-                                {value.tahun_terbit}
-                            </li>
+                            <li>{value.judul}</li>
+                            <li>{value.penulis}</li>
+                            <li>{value.tahun_terbit}</li>
                         </ul>
                     ))}
                 </div>
