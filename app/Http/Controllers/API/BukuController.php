@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\API;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\BukuRequest;
 use App\Models\Buku;
 use Illuminate\Http\Request;
 
@@ -27,9 +28,11 @@ class BukuController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function store(BukuRequest $request)
     {
-        //
+        Buku::create($request->validated());
+
+        return to_route('buku.index');
     }
 
     /**

@@ -12,3 +12,4 @@ use Illuminate\Support\Facades\Route;
 Route::get('/test', [API\TestController::class, 'index']);
 
 Route::get('/buku', [API\BukuController::class, 'index']);
+Route::post('/buku', [API\BukuController::class, 'store']);

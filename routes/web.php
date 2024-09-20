@@ -5,8 +5,8 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 
-Route::get('/', [Controllers\HomeController::class, 'index']);
-Route::get('/buku', [Controllers\BukuController::class, 'index']);
+Route::get('/', [Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/buku', [Controllers\BukuController::class, 'index'])->name('buku.index');
 
 Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');
