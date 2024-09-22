@@ -3,12 +3,12 @@
 @tailwind utilities;
 
 .animate-skeleton {
-    @apply duration-100 rounded-md bg-gradient-to-r from-slate-300 to-transparent;
+    @apply rounded-md bg-gradient-to-r from-slate-300 to-transparent;
     animation: pulse 2s linear infinite;
 }
 
 .animate-skeleton-image {
-    @apply duration-100 rounded-md bg-gradient-to-r from-red-500 to-transparent;
+    @apply rounded-md bg-gradient-to-r from-slate-500 to-transparent;
     animation: pulse 2s linear infinite;
 }
 
